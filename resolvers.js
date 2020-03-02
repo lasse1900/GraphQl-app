@@ -1,0 +1,9 @@
+exports.resoolvers = {
+
+  Query: {
+    getAllRecipes: () => {
+      
+    }
+  }
+
+}
