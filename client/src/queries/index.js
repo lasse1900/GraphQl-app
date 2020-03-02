@@ -1,6 +1,7 @@
-import {gql } from 'apollo-boost'
+import { gql } from 'apollo-boost'
 
-export const GET_ALL_RECIPES = gql `
+/* Recepes queries */
+export const GET_ALL_RECIPES = gql`
 
 query {
   getAllRecipes {
@@ -14,4 +15,23 @@ query {
 }
 
 `;
+
+/* Recepes mutations */
+
+
+/* User queries */
+
+
+/* User mutations */
+
+export const SIGNUP_USER = gql`
+mutation($username: String!, $email: String!, $password: String!) {
+  signupUser(username: $username, email: $email, password: $password) {
+    token
+  }
+}
+
+`
+
+
 
