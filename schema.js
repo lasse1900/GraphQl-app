@@ -21,6 +21,7 @@ type User {
 }
 
 type Query {
+  getCurrentUser: User
   getAllRecipes: [Recipe]
 }
 

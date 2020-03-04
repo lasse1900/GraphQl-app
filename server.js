@@ -66,13 +66,15 @@ app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }))
 
 app.use('/graphql',
   bodyParser.json(),
-  graphqlExpress({
+  graphqlExpress(({ currentUser }) => ({
     schema,
     context: {
       Recipe,
-      User
+      User,
+      currentUser
     }
   }))
+)
 
 const PORT = process.env.PORT || 4444
 
